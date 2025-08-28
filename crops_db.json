@@ -1,0 +1,94 @@
+{
+  "crops": [
+    {
+      "id": 1,
+      "name": "Maize",
+      "plantingSeason": "March - July",
+      "maturityDays": 90,
+      "location": "Temperate",
+      "image": "https://www.shutterstock.com/image-photo/corn-cobs-plantation-field-260nw-2477036223.jpg",
+      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
+    },
+    {
+      "id": 2,
+      "name": "Beans",
+      "plantingSeason": "March - June, September - November",
+      "maturityDays": 75,
+      "location": "Temperate",
+      "image": "https://www.shutterstock.com/image-photo/red-beans-growing-field-260nw-2484785317.jpg",
+      "description": "Beans are a key source of protein and do well in cool, temperate climates."
+    },
+    {
+      "id": 3,
+      "name": "Spinach",
+      "plantingSeason": "Year-round (best March - June)",
+      "maturityDays": 45,
+      "location": "Tropical",
+      "image": "https://www.shutterstock.com/image-photo/growing-spinach-home-garden-260nw-2496977711.jpg",
+      "description": "Spinach is a fast-growing leafy vegetable that thrives in warm, humid regions."
+    },
+    {
+      "id": 4,
+      "name": "Coconut",
+      "plantingSeason": "Year-round",
+      "maturityDays": 365,
+      "location": "Tropical",
+      "image": "https://www.shutterstock.com/image-photo/coconut-trees-blue-sky-260nw-1549467397.jpg",
+      "description": "Coconuts are a coastal tropical crop, valued for food, oil, and fiber."
+    },
+    {
+      "id": 5,
+      "name": "Mango",
+      "plantingSeason": "October - December",
+      "maturityDays": 150,
+      "location": "Tropical",
+      "image": "https://www.shutterstock.com/image-photo/mango-fruit-tree-260nw-2328742647.jpg",
+      "description": "Mangoes thrive in tropical regions and are among the most popular fruits in Kenya."
+    },
+    {
+      "id": 6,
+      "name": "Sorghum",
+      "plantingSeason": "March - May",
+      "maturityDays": 100,
+      "location": "Dry",
+      "image": "https://www.shutterstock.com/image-photo/biofuel-new-boom-food-sorghum-260nw-2180750757.jpg",
+      "description": "Sorghum is drought-tolerant, making it ideal for arid and semi-arid lands."
+    },
+    {
+      "id": 7,
+      "name": "Millet",
+      "plantingSeason": "April - June",
+      "maturityDays": 95,
+      "location": "Dry",
+      "image": "https://www.shutterstock.com/image-photo/pearl-millet-pennisetum-glaucum-crop-farm-260nw-2173064711.jpg",
+      "description": "Millet is a hardy cereal grown in dry regions, valued for porridge and flour."
+    },
+    {
+      "id": 8,
+      "name": "Cowpeas",
+      "plantingSeason": "March - May",
+      "maturityDays": 70,
+      "location": "Dry",
+      "image": "https://www.shutterstock.com/image-photo/cowpeas-crop-field-260nw-2220613565.jpg",
+      "description": "Cowpeas are both a food crop and fodder, well suited to semi-arid climates."
+    },
+    {
+      "id": 9,
+      "name": "Irish Potato",
+      "plantingSeason": "March - June, October - December",
+      "maturityDays": 90,
+      "location": "Temperate",
+      "image": "https://www.shutterstock.com/image-photo/fresh-potato-plants-soil-growing-260nw-1948540012.jpg",
+      "description": "Irish potatoes grow best in cool highland climates with fertile soils."
+    },
+    {
+      "id": 10,
+      "name": "Cabbage",
+      "plantingSeason": "July - September",
+      "maturityDays": 85,
+      "location": "Temperate",
+      "image": "https://cdn.pixabay.com/photo/2018/10/03/22/08/kohl-3722517_1280.jpg",
+      "description": "Cabbage is a leafy vegetable common in highland farms, grown for both home use and markets."
+    }
+  ]
+}
