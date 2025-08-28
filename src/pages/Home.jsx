@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import CropCard from '../components/CropCard'
 
 function Home() {
   // State for saving fetched Data
@@ -15,6 +16,11 @@ function Home() {
     <div>
       <h1>Home Page</h1>
       <p>This is the landing page.</p>
+      <div>
+        {cropData.map(crop => (
+          <CropCard key={crop.id} crop={crop} />
+        ))}
+      </div>
     </div>
   );
 }
