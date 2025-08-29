@@ -107,6 +107,4 @@ function MyGarden() {
     </div>
   );
 }
-
 export default MyGarden;
-
