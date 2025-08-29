@@ -1,11 +1,10 @@
 import { useState } from "react"
 
-function Filter () {
-    const [selectedOption, setSelectedOption] = useState("")
+function Filter ({setOption , option}) {
     return (
         <div className="filter">
             <form>
-                <select value={selectedOption} onChange={setSelectedOption(e => e.target.value)}>
+                <select value={option} onChange={(e) => setOption(e.target.value)}>
                     <option value="">Select a Season</option>
                     <option value="Temperate">Temperate</option>
                     <option value="Tropical">Tropical</option>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import CropCard from '../components/CropCard'
+import CropCard from '../components/CropCard';
+import Filter from '../components/Filter'
 
 function Home() {
   // State for saving fetched Data
@@ -11,13 +12,17 @@ function Home() {
       .then(data => setCropData(data))
       .catch(error => console.error(error))
   }, [])
-
+  // State for filter option
+  const [option, setOption] = useState("")
+  // Filtering Data based on option selected
+    const filteredData = option ? cropData.filter(crop => crop.location === option) : cropData;
+  
   return (
     <div>
       <h1>Home Page</h1>
-      <p>This is the landing page.</p>
+      <Filter setOption={setOption} option={option}/>
       <div>
-        {cropData.map(crop => (
+        {filteredData.map(crop => (
           <CropCard key={crop.id} crop={crop} />
         ))}
       </div>
