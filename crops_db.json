@@ -370,6 +370,24 @@
       "maturityDays": 90,
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
       "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
+    },
+    {
+      "id": "7d91",
+      "name": "Maize",
+      "plantingDate": "2025-08-31",
+      "harvestDate": "2025-11-29",
+      "maturityDays": 90,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
+      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
+    },
+    {
+      "id": "c041",
+      "name": "Coconut",
+      "plantingDate": "2025-08-31",
+      "harvestDate": "2026-08-31",
+      "maturityDays": 365,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Coconut_tree_06264.JPG/640px-Coconut_tree_06264.JPG",
+      "description": "Coconuts are a coastal tropical crop, valued for food, oil, and fiber."
     }
   ],
   "history": []

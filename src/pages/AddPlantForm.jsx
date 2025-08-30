@@ -1,34 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { calculateHarvestDate } from "../utils/harvestUtils";
 
-const AddPlantForm = ({ onClose }) => {
-  const [crops, setCrops] = useState([]);
-  const [selectedCropId, setSelectedCropId] = useState("");
+const AddPlantForm = ({ crop, onClose }) => {
   const [plantingDate, setPlantingDate] = useState("");
-
-  // Fetch available crops from backend
-  useEffect(() => {
-    const fetchCrops = async () => {
-      try {
-        const res = await axios.get("http://localhost:3000/crops");
-        setCrops(res.data);
-      } catch (err) {
-        console.error("Error fetching crops:", err);
-      }
-    };
-    fetchCrops();
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const selectedCrop = crops.find(
-      (c) => String(c.id) === String(selectedCropId) // ✅ safer match
-    );
-
-    if (!selectedCrop) {
-      alert("Please select a crop.");
+    if (!crop) {
+      alert("No crop selected.");
       return;
     }
 
@@ -44,22 +25,23 @@ const AddPlantForm = ({ onClose }) => {
     }
 
     const formattedPlantingDate = parsedDate.toISOString().split("T")[0];
+
     const newCrop = {
-      name: selectedCrop.name,
+      name: crop.name,
       plantingDate: formattedPlantingDate,
       harvestDate: calculateHarvestDate(
         formattedPlantingDate,
-        selectedCrop.maturityDays
+        crop.maturityDays
       ),
-      maturityDays: selectedCrop.maturityDays,
-      image: selectedCrop.image,
-      description: selectedCrop.description,
+      maturityDays: crop.maturityDays,
+      image: crop.image,
+      description: crop.description,
     };
 
     try {
       await axios.post("http://localhost:3000/myGarden", newCrop);
-      alert(`${newCrop.name} added to your garden!`);
-      onClose?.(); // ✅ only call if exists
+      alert(`${crop.name} added to your garden!`);
+      onClose?.();
     } catch (err) {
       console.error("Error adding crop:", err.response?.data || err.message);
       alert("Failed to add crop.");
@@ -70,23 +52,16 @@ const AddPlantForm = ({ onClose }) => {
     <form onSubmit={handleSubmit} className="p-4 bg-gray-100 rounded">
       <h2 className="text-lg font-bold mb-2">Add Crop to Garden</h2>
 
-      {/* Crop selection dropdown */}
-      <label className="block mb-2">
-        Select Crop:
-        <select
-          value={selectedCropId}
-          onChange={(e) => setSelectedCropId(e.target.value)}
-          required
-          className="border p-2 w-full"
-        >
-          <option value="">-- Choose a crop --</option>
-          {crops.map((crop) => (
-            <option key={crop.id} value={crop.id}>
-              {crop.name}
-            </option>
-          ))}
-        </select>
-      </label>
+      {/* Show crop name (read-only) */}
+      <div className="mb-2">
+        <label className="block font-semibold">Crop Name:</label>
+        <input
+          type="text"
+          value={crop?.name || ""}
+          readOnly
+          className="border p-2 w-full bg-gray-200"
+        />
+      </div>
 
       {/* Planting date input */}
       <label className="block mb-2">
