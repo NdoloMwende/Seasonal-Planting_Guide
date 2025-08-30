@@ -11,7 +11,7 @@ const AddPlantForm = ({ onClose }) => {
   useEffect(() => {
     const fetchCrops = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/crops");
+        const res = await axios.get("http://localhost:3000/crops");
         setCrops(res.data);
       } catch (err) {
         console.error("Error fetching crops:", err);
@@ -57,7 +57,7 @@ const AddPlantForm = ({ onClose }) => {
     };
 
     try {
-      await axios.post("http://localhost:5000/myGarden", newCrop);
+      await axios.post("http://localhost:3000/myGarden", newCrop);
       alert(`${newCrop.name} added to your garden!`);
       onClose?.(); // ✅ only call if exists
     } catch (err) {
