@@ -1,371 +1,376 @@
 {
   "crops": [
-{
-  "id": 1,
-  "name": "Maize",
-  "plantingSeason": "March - July",
-  "maturityDays": 90,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
-  "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
-},
-{
-  "id": 2,
-  "name": "Beans",
-  "plantingSeason": "March - June, September - November",
-  "maturityDays": 75,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Glycine_max_15-p.bot-glyci.max-035.jpg/640px-Glycine_max_15-p.bot-glyci.max-035.jpg",
-  "description": "Beans are a key source of protein and do well in cool, temperate climates."
-},
-{
-  "id": 3,
-  "name": "Spinach",
-  "plantingSeason": "Year-round (best March - June)",
-  "maturityDays": 45,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Spinacia_oleracea_bd-1.jpg/640px-Spinacia_oleracea_bd-1.jpg",
-  "description": "Spinach is a fast-growing leafy vegetable that thrives in warm, humid regions."
-},
-{
-  "id": 4,
-  "name": "Coconut",
-  "plantingSeason": "Year-round",
-  "maturityDays": 365,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Coconut_tree_06264.JPG/640px-Coconut_tree_06264.JPG",
-  "description": "Coconuts are a coastal tropical crop, valued for food, oil, and fiber."
-},
-{
-  "id": 5,
-  "name": "Mango",
-  "plantingSeason": "October - December",
-  "maturityDays": 150,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mangifera_indica_var._Jos%C3%A9.JPG/640px-Mangifera_indica_var._Jos%C3%A9.JPG",
-  "description": "Mangoes thrive in tropical regions and are among the most popular fruits in Kenya."
-},
-{
-  "id": 6,
-  "name": "Sorghum",
-  "plantingSeason": "March - May",
-  "maturityDays": 100,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Jowar_Sorghum.JPG/640px-Jowar_Sorghum.JPG",
-  "description": "Sorghum is drought-tolerant, making it ideal for arid and semi-arid lands."
-},
-{
-  "id": 7,
-  "name": "Millet",
-  "plantingSeason": "April - June",
-  "maturityDays": 95,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Millet_Farm_In_Ghana%2C_Africa.jpg/640px-Millet_Farm_In_Ghana%2C_Africa.jpg", 
-  "description": "Millet is a hardy cereal grown in dry regions, valued for porridge and flour."
-},
-{
-  "id": 8,
-  "name": "Cowpeas",
-  "plantingSeason": "March - May",
-  "maturityDays": 70,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Vigna_unguiculata_habit1_%2810737067553%29.jpg/640px-Vigna_unguiculata_habit1_%2810737067553%29.jpg",
-  "description": "Cowpeas are both a food crop and fodder, well suited to semi-arid climates."
-},
-{
-  "id": 9,
-  "name": "Irish Potato",
-  "plantingSeason": "March - June, October - December",
-  "maturityDays": 90,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/An_Irish_potato_garden_in_Butare_Kyamuhunga_in_Western_Uganda.jpg/640px-An_Irish_potato_garden_in_Butare_Kyamuhunga_in_Western_Uganda.jpg",
-  "description": "Irish potatoes grow best in cool highland climates with fertile soils."
-},
-{
-  "id": 10,
-  "name": "Cabbage",
-  "plantingSeason": "July - September",
-  "maturityDays": 85,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Brassica_oleracea_var._capitata_%284170722993%29.jpg/640px-Brassica_oleracea_var._capitata_%284170722993%29.jpg",
-  "description": "Cabbage is a leafy vegetable common in highland farms, grown for both home use and markets."
-},
-{
-  "id": 11,
-  "name": "Tomato",
-  "plantingSeason": "August - October, January - March",
-  "maturityDays": 75,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Tomato2_002.jpg/640px-Tomato2_002.jpg",
-  "description": "Tomatoes are widely grown vegetables that thrive in warm regions with good irrigation."
-},
-{
-  "id": 12,
-  "name": "Onion",
-  "plantingSeason": "September - November",
-  "maturityDays": 120,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Onions_3.jpg/640px-Onions_3.jpg",
-  "description": "Onions prefer cool to moderate climates and are a staple ingredient in most dishes."
-},
-{
-  "id": 13,
-  "name": "Carrot",
-  "plantingSeason": "February - April, August - September",
-  "maturityDays": 80,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bunches_of_carrots.jpg/640px-Bunches_of_carrots.jpg",
-  "description": "Carrots are a root crop rich in vitamins, thriving in fertile, well-drained soils."
-},
-{
-  "id": 14,
-  "name": "Banana",
-  "plantingSeason": "Year-round",
-  "maturityDays": 300,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Banana_fruit_%28musa%29.jpg/640px-Banana_fruit_%28musa%29.jpg",
-  "description": "Bananas grow well in tropical climates with consistent rainfall and fertile soils."
-},
-{
-  "id": 15,
-  "name": "Avocado",
-  "plantingSeason": "March - June",
-  "maturityDays": 240,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Avocado_On_Tree.jpg/640px-Avocado_On_Tree.jpg",
-  "description": "Avocados are nutrient-rich fruits that thrive in warm highland regions."
-},
-{
-  "id": 16,
-  "name": "Sunflower",
-  "plantingSeason": "March - May",
-  "maturityDays": 90,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Helianthus_annuus_00038.jpg/640px-Helianthus_annuus_00038.jpg",
-  "description": "Sunflowers are drought-tolerant crops grown for oil production and animal feed."
-},
-{
-  "id": 17,
-  "name": "Sweet Potato",
-  "plantingSeason": "March - June, September - November",
-  "maturityDays": 120,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ipomoea_batatas_Convolvulaceae.jpg/640px-Ipomoea_batatas_Convolvulaceae.jpg",
-  "description": "Sweet potatoes are versatile root crops thriving in warm, well-drained soils."
-},
-{
-  "id": 18,
-  "name": "Pineapple",
-  "plantingSeason": "Year-round",
-  "maturityDays": 365,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/AnanasComosusOnPlant.jpg/640px-AnanasComosusOnPlant.jpg",
-  "description": "Pineapples are tropical fruits that thrive in sunny regions with moderate rainfall."
-},
-{
-  "id": 19,
-  "name": "Cassava",
-  "plantingSeason": "March - May, September - November",
-  "maturityDays": 300,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Manihot_esculenta_%28Manioc2%29.jpg/640px-Manihot_esculenta_%28Manioc2%29.jpg",
-  "description": "Cassava is a drought-resistant root crop, a major source of carbohydrates in arid zones."
-},
-{
-  "id": 20,
-  "name": "Papaya",
-  "plantingSeason": "March - April, September - October",
-  "maturityDays": 180,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Carica_papaya_%28Papayer%29_-_105.jpg/640px-Carica_papaya_%28Papayer%29_-_105.jpg",
-  "description": "Papayas are tropical fruits grown for their sweet taste and nutritional benefits."
-},
-{
-  "id": 21,
-  "name": "Tea",
-  "plantingSeason": "March - May, October - November",
-  "maturityDays": 730,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Csinensis.jpg/640px-Csinensis.jpg",
-  "description": "Tea thrives in high-altitude regions with well-drained acidic soils, making it a key cash crop."
-},
-{
-  "id": 22,
-  "name": "Coffee",
-  "plantingSeason": "March - May",
-  "maturityDays": 1095,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Coffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg/640px-Coffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg",
-  "description": "Coffee is a high-value tropical crop, best grown in well-drained volcanic soils."
-},
-{
-  "id": 23,
-  "name": "Groundnut",
-  "plantingSeason": "March - May, September - November",
-  "maturityDays": 120,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Groundnut_plants.jpg/640px-Groundnut_plants.jpg",
-  "description": "Groundnuts are legumes grown in dry, sandy soils for oil and protein-rich seeds."
-},
-{
-  "id": 24,
-  "name": "Sugarcane",
-  "plantingSeason": "March - June",
-  "maturityDays": 365,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Sugar_cane_farm_plantation.jpg/640px-Sugar_cane_farm_plantation.jpg",
-  "description": "Sugarcane is a major cash crop cultivated in warm, tropical lowlands."
-},
-{
-  "id": 25,
-  "name": "Barley",
-  "plantingSeason": "May - July",
-  "maturityDays": 90,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Escourgeon-Hordeum_vulgare_subsp._vulgare.jpg/640px-Escourgeon-Hordeum_vulgare_subsp._vulgare.jpg",
-  "description": "Barley is a temperate cereal crop commonly grown in cool highland areas."
-},
-{
-  "id": 26,
-  "name": "Lettuce",
-  "plantingSeason": "Year-round (best February - June)",
-  "maturityDays": 60,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lactuca_sativa_%27Ashbrook%27.jpg/640px-Lactuca_sativa_%27Ashbrook%27.jpg",
-  "description": "Lettuce is a leafy vegetable that grows best in cool, moist climates."
-},
-{
-  "id": 27,
-  "name": "Peas",
-  "plantingSeason": "March - May, September - November",
-  "maturityDays": 70,
-  "location": "Temperate",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pisum_sativum_-_1006.jpg/640px-Pisum_sativum_-_1006.jpg",
-  "description": "Peas are cool-season legumes valued for their protein-rich seeds."
-},
-{
-  "id": 28,
-  "name": "Okra",
-  "plantingSeason": "March - June, September - November",
-  "maturityDays": 60,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Okra%28Abelmoschus_esculentus%29.JPG/640px-Okra%28Abelmoschus_esculentus%29.JPG",
-  "description": "Okra is a tropical vegetable known for its edible pods, thriving in warm conditions."
-},
-{
-  "id": 29,
-  "name": "Chili Pepper",
-  "plantingSeason": "August - October, January - March",
-  "maturityDays": 90,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Chilli_pepper_plant_2.jpg/640px-Chilli_pepper_plant_2.jpg",
-  "description": "Chili peppers are widely grown in tropical regions for spice and seasoning."
-},
-{
-  "id": 30,
-  "name": "Pumpkin",
-  "plantingSeason": "March - May, September - November",
-  "maturityDays": 120,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pumpkin20241022.jpg/640px-Pumpkin20241022.jpg",
-  "description": "Pumpkins are versatile vegetables grown in warm climates, used for food and livestock feed."
-},
-{
-  "id": 31,
-  "name": "Quinoa",
-  "plantingSeason": "March - May",
-  "maturityDays": 120,
-  "location": "Highland",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Quinua.JPG/640px-Quinua.JPG",
-  "description": "A nutrient-rich pseudo-cereal suited for cooler highland regions with minimal rainfall."
-},
-{
-  "id": 32,
-  "name": "Date Palm",
-  "plantingSeason": "March - April",
-  "maturityDays": 365,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Phoenix_dactylifera%2C_date_palm_Half_Moon_Cay_7027.jpg/640px-Phoenix_dactylifera%2C_date_palm_Half_Moon_Cay_7027.jpg",
-  "description": "A hardy desert fruit tree that thrives in arid zones with irrigation support."
-},
-{
-  "id": 33,
-  "name": "Vanilla",
-  "plantingSeason": "April - June",
-  "maturityDays": 720,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Vanilla_planifolia_1.jpg/640px-Vanilla_planifolia_1.jpg",
-  "description": "A climbing orchid cultivated for its valuable pods in humid, tropical regions."
-},
-{
-  "id": 34,
-  "name": "Jerusalem Artichoke",
-  "plantingSeason": "March - May",
-  "maturityDays": 130,
-  "location": "Highland",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Helianthus_tuberosus_Parco_fluviale_alta_Val_d%27Elsa_18.jpg/640px-Helianthus_tuberosus_Parco_fluviale_alta_Val_d%27Elsa_18.jpg",
-  "description": "A tuber crop that performs well in cool climates and is used as a root vegetable."
-},
-{
-  "id": 35,
-  "name": "Sesame",
-  "plantingSeason": "March - May",
-  "maturityDays": 100,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Sesamum_indicum--_The_Sesame_Flower_%2826779961292%29.jpg/640px-Sesamum_indicum--_The_Sesame_Flower_%2826779961292%29.jpg",
-  "description": "An oilseed crop known for drought tolerance, ideal for semi-arid regions."
-},
-{
-  "id": 36,
-  "name": "Passion Fruit",
-  "plantingSeason": "March - May, September",
-  "maturityDays": 240,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hojas_de_maracuy%C3%A1_%28Passiflora_edulis%29.jpg/640px-Hojas_de_maracuy%C3%A1_%28Passiflora_edulis%29.jpg",
-  "description": "A climbing tropical vine producing aromatic fruits; requires support and warm conditions."
-},
-{
-  "id": 37,
-  "name": "Chia",
-  "plantingSeason": "April - May",
-  "maturityDays": 130,
-  "location": "Highland",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Anthemis_chia_001.JPG/640px-Anthemis_chia_001.JPG",
-  "description": "A high-protein seed crop that grows well in mild highland climates."
-},
-{
-  "id": 38,
-  "name": "Sorghum",
-  "plantingSeason": "March - May",
-  "maturityDays": 110,
-  "location": "Dry",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jowar_Sorghum.jpg/640px-Jowar_Sorghum.jpg",
-  "description": "A drought-hardy cereal grain widely grown in arid and semi-arid lands."
-},
-{
-  "id": 39,
-  "name": "Rambutan",
-  "plantingSeason": "April - June",
-  "maturityDays": 365,
-  "location": "Tropical",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Rambutan_fruit.jpg/640px-Rambutan_fruit.jpg",
-  "description": "An exotic tropical fruit tree related to lychee, thriving in humid areas."
-},
-{
-  "id": 40,
-  "name": "Fennel",
-  "plantingSeason": "February - April",
-  "maturityDays": 90,
-  "location": "Highland",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Fennel_%28Foeniculum_vulgare%29_-_geograph.org.uk_-_506985.jpg/640px-Fennel_%28Foeniculum_vulgare%29_-_geograph.org.uk_-_506985.jpg",
-  "description": "A fragrant herb and vegetable suited to cool, highland regions with rich soils."
-}
-
+    {
+      "id": "1",
+      "name": "Maize",
+      "plantingSeason": "March - July",
+      "maturityDays": 90,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
+      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
+    },
+    {
+      "id": "2",
+      "name": "Beans",
+      "plantingSeason": "March - June, September - November",
+      "maturityDays": 75,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Glycine_max_15-p.bot-glyci.max-035.jpg/640px-Glycine_max_15-p.bot-glyci.max-035.jpg",
+      "description": "Beans are a key source of protein and do well in cool, temperate climates."
+    },
+    {
+      "id": "3",
+      "name": "Spinach",
+      "plantingSeason": "Year-round (best March - June)",
+      "maturityDays": 45,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Spinacia_oleracea_bd-1.jpg/640px-Spinacia_oleracea_bd-1.jpg",
+      "description": "Spinach is a fast-growing leafy vegetable that thrives in warm, humid regions."
+    },
+    {
+      "id": "4",
+      "name": "Coconut",
+      "plantingSeason": "Year-round",
+      "maturityDays": 365,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Coconut_tree_06264.JPG/640px-Coconut_tree_06264.JPG",
+      "description": "Coconuts are a coastal tropical crop, valued for food, oil, and fiber."
+    },
+    {
+      "id": "5",
+      "name": "Mango",
+      "plantingSeason": "October - December",
+      "maturityDays": 150,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mangifera_indica_var._Jos%C3%A9.JPG/640px-Mangifera_indica_var._Jos%C3%A9.JPG",
+      "description": "Mangoes thrive in tropical regions and are among the most popular fruits in Kenya."
+    },
+    {
+      "id": "6",
+      "name": "Sorghum",
+      "plantingSeason": "March - May",
+      "maturityDays": 100,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Jowar_Sorghum.JPG/640px-Jowar_Sorghum.JPG",
+      "description": "Sorghum is drought-tolerant, making it ideal for arid and semi-arid lands."
+    },
+    {
+      "id": "7",
+      "name": "Millet",
+      "plantingSeason": "April - June",
+      "maturityDays": 95,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Millet_Farm_In_Ghana%2C_Africa.jpg/640px-Millet_Farm_In_Ghana%2C_Africa.jpg",
+      "description": "Millet is a hardy cereal grown in dry regions, valued for porridge and flour."
+    },
+    {
+      "id": "8",
+      "name": "Cowpeas",
+      "plantingSeason": "March - May",
+      "maturityDays": 70,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Vigna_unguiculata_habit1_%2810737067553%29.jpg/640px-Vigna_unguiculata_habit1_%2810737067553%29.jpg",
+      "description": "Cowpeas are both a food crop and fodder, well suited to semi-arid climates."
+    },
+    {
+      "id": "9",
+      "name": "Irish Potato",
+      "plantingSeason": "March - June, October - December",
+      "maturityDays": 90,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/An_Irish_potato_garden_in_Butare_Kyamuhunga_in_Western_Uganda.jpg/640px-An_Irish_potato_garden_in_Butare_Kyamuhunga_in_Western_Uganda.jpg",
+      "description": "Irish potatoes grow best in cool highland climates with fertile soils."
+    },
+    {
+      "id": "10",
+      "name": "Cabbage",
+      "plantingSeason": "July - September",
+      "maturityDays": 85,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Brassica_oleracea_var._capitata_%284170722993%29.jpg/640px-Brassica_oleracea_var._capitata_%284170722993%29.jpg",
+      "description": "Cabbage is a leafy vegetable common in highland farms, grown for both home use and markets."
+    },
+    {
+      "id": "11",
+      "name": "Tomato",
+      "plantingSeason": "August - October, January - March",
+      "maturityDays": 75,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Tomato2_002.jpg/640px-Tomato2_002.jpg",
+      "description": "Tomatoes are widely grown vegetables that thrive in warm regions with good irrigation."
+    },
+    {
+      "id": "12",
+      "name": "Onion",
+      "plantingSeason": "September - November",
+      "maturityDays": 120,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Onions_3.jpg/640px-Onions_3.jpg",
+      "description": "Onions prefer cool to moderate climates and are a staple ingredient in most dishes."
+    },
+    {
+      "id": "13",
+      "name": "Carrot",
+      "plantingSeason": "February - April, August - September",
+      "maturityDays": 80,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bunches_of_carrots.jpg/640px-Bunches_of_carrots.jpg",
+      "description": "Carrots are a root crop rich in vitamins, thriving in fertile, well-drained soils."
+    },
+    {
+      "id": "14",
+      "name": "Banana",
+      "plantingSeason": "Year-round",
+      "maturityDays": 300,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Banana_fruit_%28musa%29.jpg/640px-Banana_fruit_%28musa%29.jpg",
+      "description": "Bananas grow well in tropical climates with consistent rainfall and fertile soils."
+    },
+    {
+      "id": "15",
+      "name": "Avocado",
+      "plantingSeason": "March - June",
+      "maturityDays": 240,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Avocado_On_Tree.jpg/640px-Avocado_On_Tree.jpg",
+      "description": "Avocados are nutrient-rich fruits that thrive in warm highland regions."
+    },
+    {
+      "id": "16",
+      "name": "Sunflower",
+      "plantingSeason": "March - May",
+      "maturityDays": 90,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Helianthus_annuus_00038.jpg/640px-Helianthus_annuus_00038.jpg",
+      "description": "Sunflowers are drought-tolerant crops grown for oil production and animal feed."
+    },
+    {
+      "id": "17",
+      "name": "Sweet Potato",
+      "plantingSeason": "March - June, September - November",
+      "maturityDays": 120,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Ipomoea_batatas_Convolvulaceae.jpg/640px-Ipomoea_batatas_Convolvulaceae.jpg",
+      "description": "Sweet potatoes are versatile root crops thriving in warm, well-drained soils."
+    },
+    {
+      "id": "18",
+      "name": "Pineapple",
+      "plantingSeason": "Year-round",
+      "maturityDays": 365,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/AnanasComosusOnPlant.jpg/640px-AnanasComosusOnPlant.jpg",
+      "description": "Pineapples are tropical fruits that thrive in sunny regions with moderate rainfall."
+    },
+    {
+      "id": "19",
+      "name": "Cassava",
+      "plantingSeason": "March - May, September - November",
+      "maturityDays": 300,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Manihot_esculenta_%28Manioc2%29.jpg/640px-Manihot_esculenta_%28Manioc2%29.jpg",
+      "description": "Cassava is a drought-resistant root crop, a major source of carbohydrates in arid zones."
+    },
+    {
+      "id": "20",
+      "name": "Papaya",
+      "plantingSeason": "March - April, September - October",
+      "maturityDays": 180,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Carica_papaya_%28Papayer%29_-_105.jpg/640px-Carica_papaya_%28Papayer%29_-_105.jpg",
+      "description": "Papayas are tropical fruits grown for their sweet taste and nutritional benefits."
+    },
+    {
+      "id": "21",
+      "name": "Tea",
+      "plantingSeason": "March - May, October - November",
+      "maturityDays": 730,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Csinensis.jpg/640px-Csinensis.jpg",
+      "description": "Tea thrives in high-altitude regions with well-drained acidic soils, making it a key cash crop."
+    },
+    {
+      "id": "22",
+      "name": "Coffee",
+      "plantingSeason": "March - May",
+      "maturityDays": 1095,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Coffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg/640px-Coffee_tree_in_Hacienda_Guayabal%2C_Colombia.jpg",
+      "description": "Coffee is a high-value tropical crop, best grown in well-drained volcanic soils."
+    },
+    {
+      "id": "23",
+      "name": "Groundnut",
+      "plantingSeason": "March - May, September - November",
+      "maturityDays": 120,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Groundnut_plants.jpg/640px-Groundnut_plants.jpg",
+      "description": "Groundnuts are legumes grown in dry, sandy soils for oil and protein-rich seeds."
+    },
+    {
+      "id": "24",
+      "name": "Sugarcane",
+      "plantingSeason": "March - June",
+      "maturityDays": 365,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Sugar_cane_farm_plantation.jpg/640px-Sugar_cane_farm_plantation.jpg",
+      "description": "Sugarcane is a major cash crop cultivated in warm, tropical lowlands."
+    },
+    {
+      "id": "25",
+      "name": "Barley",
+      "plantingSeason": "May - July",
+      "maturityDays": 90,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Escourgeon-Hordeum_vulgare_subsp._vulgare.jpg/640px-Escourgeon-Hordeum_vulgare_subsp._vulgare.jpg",
+      "description": "Barley is a temperate cereal crop commonly grown in cool highland areas."
+    },
+    {
+      "id": "26",
+      "name": "Lettuce",
+      "plantingSeason": "Year-round (best February - June)",
+      "maturityDays": 60,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Lactuca_sativa_%27Ashbrook%27.jpg/640px-Lactuca_sativa_%27Ashbrook%27.jpg",
+      "description": "Lettuce is a leafy vegetable that grows best in cool, moist climates."
+    },
+    {
+      "id": "27",
+      "name": "Peas",
+      "plantingSeason": "March - May, September - November",
+      "maturityDays": 70,
+      "location": "Temperate",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Pisum_sativum_-_1006.jpg/640px-Pisum_sativum_-_1006.jpg",
+      "description": "Peas are cool-season legumes valued for their protein-rich seeds."
+    },
+    {
+      "id": "28",
+      "name": "Okra",
+      "plantingSeason": "March - June, September - November",
+      "maturityDays": 60,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Okra%28Abelmoschus_esculentus%29.JPG/640px-Okra%28Abelmoschus_esculentus%29.JPG",
+      "description": "Okra is a tropical vegetable known for its edible pods, thriving in warm conditions."
+    },
+    {
+      "id": "29",
+      "name": "Chili Pepper",
+      "plantingSeason": "August - October, January - March",
+      "maturityDays": 90,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Chilli_pepper_plant_2.jpg/640px-Chilli_pepper_plant_2.jpg",
+      "description": "Chili peppers are widely grown in tropical regions for spice and seasoning."
+    },
+    {
+      "id": "30",
+      "name": "Pumpkin",
+      "plantingSeason": "March - May, September - November",
+      "maturityDays": 120,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Pumpkin20241022.jpg/640px-Pumpkin20241022.jpg",
+      "description": "Pumpkins are versatile vegetables grown in warm climates, used for food and livestock feed."
+    },
+    {
+      "id": "31",
+      "name": "Quinoa",
+      "plantingSeason": "March - May",
+      "maturityDays": 120,
+      "location": "Highland",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Quinua.JPG/640px-Quinua.JPG",
+      "description": "A nutrient-rich pseudo-cereal suited for cooler highland regions with minimal rainfall."
+    },
+    {
+      "id": "32",
+      "name": "Date Palm",
+      "plantingSeason": "March - April",
+      "maturityDays": 365,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Phoenix_dactylifera%2C_date_palm_Half_Moon_Cay_7027.jpg/640px-Phoenix_dactylifera%2C_date_palm_Half_Moon_Cay_7027.jpg",
+      "description": "A hardy desert fruit tree that thrives in arid zones with irrigation support."
+    },
+    {
+      "id": "33",
+      "name": "Vanilla",
+      "plantingSeason": "April - June",
+      "maturityDays": 720,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Vanilla_planifolia_1.jpg/640px-Vanilla_planifolia_1.jpg",
+      "description": "A climbing orchid cultivated for its valuable pods in humid, tropical regions."
+    },
+    {
+      "id": "34",
+      "name": "Jerusalem Artichoke",
+      "plantingSeason": "March - May",
+      "maturityDays": 130,
+      "location": "Highland",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Helianthus_tuberosus_Parco_fluviale_alta_Val_d%27Elsa_18.jpg/640px-Helianthus_tuberosus_Parco_fluviale_alta_Val_d%27Elsa_18.jpg",
+      "description": "A tuber crop that performs well in cool climates and is used as a root vegetable."
+    },
+    {
+      "id": "35",
+      "name": "Sesame",
+      "plantingSeason": "March - May",
+      "maturityDays": 100,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Sesamum_indicum--_The_Sesame_Flower_%2826779961292%29.jpg/640px-Sesamum_indicum--_The_Sesame_Flower_%2826779961292%29.jpg",
+      "description": "An oilseed crop known for drought tolerance, ideal for semi-arid regions."
+    },
+    {
+      "id": "36",
+      "name": "Passion Fruit",
+      "plantingSeason": "March - May, September",
+      "maturityDays": 240,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hojas_de_maracuy%C3%A1_%28Passiflora_edulis%29.jpg/640px-Hojas_de_maracuy%C3%A1_%28Passiflora_edulis%29.jpg",
+      "description": "A climbing tropical vine producing aromatic fruits; requires support and warm conditions."
+    },
+    {
+      "id": "37",
+      "name": "Chia",
+      "plantingSeason": "April - May",
+      "maturityDays": 130,
+      "location": "Highland",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Anthemis_chia_001.JPG/640px-Anthemis_chia_001.JPG",
+      "description": "A high-protein seed crop that grows well in mild highland climates."
+    },
+    {
+      "id": "38",
+      "name": "Sorghum",
+      "plantingSeason": "March - May",
+      "maturityDays": 110,
+      "location": "Dry",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Jowar_Sorghum.jpg/640px-Jowar_Sorghum.jpg",
+      "description": "A drought-hardy cereal grain widely grown in arid and semi-arid lands."
+    },
+    {
+      "id": "39",
+      "name": "Rambutan",
+      "plantingSeason": "April - June",
+      "maturityDays": 365,
+      "location": "Tropical",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Rambutan_fruit.jpg/640px-Rambutan_fruit.jpg",
+      "description": "An exotic tropical fruit tree related to lychee, thriving in humid areas."
+    },
+    {
+      "id": "40",
+      "name": "Fennel",
+      "plantingSeason": "February - April",
+      "maturityDays": 90,
+      "location": "Highland",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Fennel_%28Foeniculum_vulgare%29_-_geograph.org.uk_-_506985.jpg/640px-Fennel_%28Foeniculum_vulgare%29_-_geograph.org.uk_-_506985.jpg",
+      "description": "A fragrant herb and vegetable suited to cool, highland regions with rich soils."
+    }
   ],
-  "myGarden" : [
-
+  "myGarden": [
+    {
+      "id": "e3d3",
+      "name": "Maize",
+      "plantingDate": "2025-08-30",
+      "harvestDate": "2025-11-28",
+      "maturityDays": 90,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
+      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
+    }
   ],
-  "history" : [
-
-  ]
+  "history": []
 }
