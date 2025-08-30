@@ -1,77 +1,97 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { calculateHarvestDate } from "../utils/harvestUtils";
 
-function AddPlantForm({ crop, onClose }) {
+const AddPlantForm = ({ crop, onClose }) => {
   const [plantingDate, setPlantingDate] = useState("");
-  const [error, setError] = useState("");
 
-  function calculateHarvestDate(date) {
-    const d = new Date(date);
-    d.setDate(d.getDate() + crop.maturityDays);
-    return d.toISOString().split("T")[0]; // YYYY-MM-DD
-  }
-
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!plantingDate) {
-      setError("Please select a planting date");
+    if (!crop) {
+      alert("No crop selected.");
       return;
     }
 
-    const harvestDate = calculateHarvestDate(plantingDate);
+    if (!plantingDate) {
+      alert("Please choose a planting date.");
+      return;
+    }
 
-    const newPlant = {
-      cropName: crop.name,
-      description: crop.description,
-      image: crop.image,
+    const parsedDate = new Date(plantingDate);
+    if (isNaN(parsedDate)) {
+      alert("Invalid planting date.");
+      return;
+    }
+
+    const formattedPlantingDate = parsedDate.toISOString().split("T")[0];
+
+    const newCrop = {
+      name: crop.name,
+      plantingDate: formattedPlantingDate,
+      harvestDate: calculateHarvestDate(
+        formattedPlantingDate,
+        crop.maturityDays
+      ),
       maturityDays: crop.maturityDays,
-      plantingDate,
-      harvestDate,
+      image: crop.image,
+      description: crop.description,
     };
 
     try {
-      await fetch("http://localhost:5001/garden", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newPlant),
-      });
-      onClose();
+      await axios.post("http://localhost:3000/myGarden", newCrop);
+      alert(`${crop.name} added to your garden!`);
+      onClose?.();
     } catch (err) {
-      console.error("Error saving crop:", err);
+      console.error("Error adding crop:", err.response?.data || err.message);
+      alert("Failed to add crop.");
     }
-  }
+  };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
-      <form
-        onSubmit={handleSubmit}
-        className="bg-white p-6 rounded-lg w-96 shadow-lg"
-      >
-        <h2 className="text-xl font-bold mb-4">Add {crop.name}</h2>
+    <form onSubmit={handleSubmit} className="p-4 bg-gray-100 rounded">
+      <h2 className="text-lg font-bold mb-2">Add Crop to Garden</h2>
 
-        {error && <p className="text-red-500">{error}</p>}
+      {/* Show crop name (read-only) */}
+      <div className="mb-2">
+        <label className="block font-semibold">Crop Name:</label>
+        <input
+          type="text"
+          value={crop?.name || ""}
+          readOnly
+          className="border p-2 w-full bg-gray-200"
+        />
+      </div>
 
-        <label className="block mb-2">
-          Planting Date:
-          <input
-            type="date"
-            value={plantingDate}
-            onChange={(e) => setPlantingDate(e.target.value)}
-            className="w-full border p-2 rounded"
-          />
-        </label>
+      {/* Planting date input */}
+      <label className="block mb-2">
+        Planting Date:
+        <input
+          type="date"
+          value={plantingDate}
+          onChange={(e) => setPlantingDate(e.target.value)}
+          required
+          className="border p-2 w-full"
+        />
+      </label>
 
-        <div className="flex justify-end gap-2 mt-4">
-          <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-400 text-white rounded">
-            Cancel
-          </button>
-          <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded">
-            Add Crop
-          </button>
-        </div>
-      </form>
-    </div>
+      <div className="flex gap-2 mt-2">
+        <button
+          type="submit"
+          className="bg-green-600 text-white px-4 py-2 rounded"
+        >
+          Submit
+        </button>
+        <button
+          type="button"
+          onClick={onClose}
+          className="bg-gray-400 text-white px-4 py-2 rounded"
+        >
+          Cancel
+        </button>
+      </div>
+    </form>
   );
-}
+};
 
 export default AddPlantForm;
