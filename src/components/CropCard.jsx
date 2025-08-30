@@ -11,7 +11,7 @@ function CropCard({ crop }) {
       <p><strong>Recommended for:</strong> {crop.location} regions</p>
       <p>{crop.description}</p>
       <p><strong>NOTE</strong> If you are planning to partake in farming {crop.name} it takes about {crop.maturityDays} days to mature </p>
-      <button onClick={setShowForm(true)} >Add Crop</button>
+      <button onClick={() => setShowForm(true)} >Add Crop</button>
       {showForm ? <AddPlantForm crop={crop} setShowForm={setShowForm} /> : null}
     </div>
   );
