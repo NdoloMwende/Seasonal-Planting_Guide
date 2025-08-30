@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AddPlantForm from "./AddPlantForm"
+import AddPlantForm from "src/pages/AddPlantForm.jsx"
 
 function CropCard({ crop }) {
   const [showForm, setShowForm] = useState(false);
@@ -12,7 +12,7 @@ function CropCard({ crop }) {
       <p>{crop.description}</p>
       <p><strong>NOTE</strong> If you are planning to partake in farming {crop.name} it takes about {crop.maturityDays} days to mature </p>
       <button onClick={() => setShowForm(true)} >Add Crop</button>
-      {showForm ? <AddPlantForm crop={crop} setShowForm={setShowForm} /> : null}
+      {showForm ? <AddPlantForm crop={crop} onClose={() => setShowForm(false)} /> : null}
     </div>
   );
 }
