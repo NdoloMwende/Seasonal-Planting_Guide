@@ -13,7 +13,7 @@ function MyGarden() {
 
   const fetchGarden = async () => {
     try {
-    const res = await fetch('http://localhost:3001/garden');
+    const res = await fetch('http://localhost:3000/myGarden');
      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
 
     const data = await res.json();
@@ -51,7 +51,7 @@ function MyGarden() {
       });
       if (!historyRes.ok) throw new Error(`HTTP error! Status: ${historyRes.status}`);
 
-      const deleteRes = await fetch(`http://localhost:3001/garden/${crop.id}`, {
+      const deleteRes = await fetch(`http://localhost:3000/myGarden/${crop.id}`, {
         method: 'DELETE'
       });
       if (!deleteRes.ok) throw new Error(`HTTP error! Status: ${deleteRes.status}`);
@@ -68,7 +68,7 @@ function MyGarden() {
   const newHarvestDate = calculateHarvestDate(newDate, maturityDays);
 
   try {
-    const res = await fetch(`http://localhost:3001/garden/${id}`, {
+    const res = await fetch(`http://localhost:3000/myGarden/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
