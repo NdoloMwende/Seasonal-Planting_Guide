@@ -10,7 +10,7 @@ function Home() {
   const[ cropData, setCropData ] = useState([])
   // Fetching Data through useEffect
   useEffect(() => {
-    fetch('http://localhost:3000/crops')
+    fetch('http://localhost:5000/crops')
       .then(response => response.json())
       .then(data => {
         setCropData(data)
