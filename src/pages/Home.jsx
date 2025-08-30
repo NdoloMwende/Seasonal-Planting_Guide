@@ -6,45 +6,57 @@ import Filter from '../components/Filter'
 function Home() {
   // State for setting loading screen
   const [loading, setLoading] = useState (true);
+  // State for setting error
+  const [error, setError] = useState(null);
   // State for saving fetched Data
   const[ cropData, setCropData ] = useState([])
-  // Fetching Data through useEffect
+  // Fetching Data through useEffect with error handling
   useEffect(() => {
-    fetch('http://localhost:5000/crops')
-      .then(response => response.json())
-      .then(data => {
-        setCropData(data)
-        setTimeout(() => {
-          setLoading(false)
-        }, 10000)
-      })
-      .catch(error => console.error(error))
+    const fetchData = async () => {
+      try {
+      const res =await fetch('http://localhost:3000/crops')
+      if (!res.ok) throw new Error ('HTTP error! Status: ${res.status}');
+      const data = await res.json();
+      setCropData(data)
+      }
+      catch (error) {
+        setError(error.message);
+      }
+      finally {
+        setLoading(false);
+      }
+      
+    }
+    fetchData();
   }, [])
   // State for filter option
   const [option, setOption] = useState("")
   // Filtering Data based on option selected
     const filteredData = option ? cropData.filter(crop => crop.location === option) : cropData;
   
+    if (loading) {
+        return (
+          <SyncLoader
+            color={"#36D7B7"}
+            loading={loading}
+            size={20}
+            aria-label="Loading Spinner"
+        data-testid="loader"
+        style={{ display: "flex", content: "center", justifyContent: "center", marginTop: "20px" }}
+      />
+      )}
+      if (error) return <div style={{ color: 'red', textAlign: 'center', marginTop: '20px' }}>Error: {error}</div>
   return (
     <div>
       <h1>Home Page</h1>
       <Filter setOption={setOption} option={option}/>
-      { loading ?
-       <SyncLoader
-        color={"#36D7B7"}
-        loading={loading}
-        size={20}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-        style={{ display: "flex", content: "center", justifyContent: "center", marginTop: "20px" }}
-      />
-      :
+      
       <div>
         {filteredData.map(crop => (
           <CropCard key={crop.id} crop={crop} />
         ))}
       </div>
-      }
+      
     </div>
   );
 }
