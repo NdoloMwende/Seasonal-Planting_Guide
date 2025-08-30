@@ -1,5 +1,5 @@
 import { useState } from "react";
-import AddPlantForm from "../pages/AddPlantForm"
+import AddPlantForm from "./AddPlantForm";
 
 function CropCard({ crop }) {
   const [showForm, setShowForm] = useState(false);
