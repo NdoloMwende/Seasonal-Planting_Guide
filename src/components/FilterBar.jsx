@@ -2,19 +2,7 @@
 import React from "react";
 import { FaFilter, FaSearch } from "react-icons/fa";
 
-/**
- * Props:
- * - searchTerm, setSearchTerm
- * - filterLocation, setFilterLocation
- * - filterSeason, setFilterSeason
- * - filterEarly, setFilterEarly
- * - showSearch = true
- * - showLocation = true
- * - showSeason = true
- * - showEarlyFilter = false
- * - locations = [] (array of strings)
- * - seasons = [] (array of strings)
- */
+
 export default function FilterBar({
   searchTerm, setSearchTerm,
   filterLocation, setFilterLocation,

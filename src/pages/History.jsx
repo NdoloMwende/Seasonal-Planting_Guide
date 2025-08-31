@@ -15,8 +15,8 @@ function History() {
     const fetchAll = async () => {
       try {
         const [hRes, cRes] = await Promise.all([
-          fetch("http://localhost:3000/history"),
-          fetch("http://localhost:3000/crops")
+          fetch(`https://seasonal-planting-guide-json-api.onrender.com/history/`),
+          fetch(`https://seasonal-planting-guide-json-api.onrender.com/crops/`)
         ]);
         if (!hRes.ok || !cRes.ok) throw new Error("Failed to fetch data");
         const [historyJson, cropsJson] = await Promise.all([hRes.json(), cRes.json()]);
