@@ -37,12 +37,17 @@ function MyGarden() {
     const harvestedEarly = new Date(actualHarvestDate) < new Date(expectedHarvestDate);
 
     const historyEntry = {
-      cropName: crop.name,
-      plantingDate: crop.plantingDate,
-      expectedHarvestDate,
-      actualHarvestDate,
-      harvestedEarly
-    };
+  cropName: crop.name,
+  plantingDate: crop.plantingDate,
+  expectedHarvestDate,
+  actualHarvestDate,
+  harvestedEarly,
+  image: crop.image,
+  description: crop.description,
+  location: crop.location,
+  plantingSeason: crop.plantingSeason
+};
+
     try {
       const historyRes = await fetch('https://seasonal-planting-guide-json-api.onrender.com/history', {
         method: 'POST',
@@ -86,21 +91,23 @@ function MyGarden() {
     toast.error("Failed to update planting date.");
   }
 };
-  return (
-    <div className="p-6">
+   return (
+    <div className="garden-container">
       <ToastContainer />
-      <h1 className="text-2xl font-bold mb-4">🌱 My Garden</h1>
+      <h1 className="page-title">My Garden</h1>
       {garden.length === 0 ? (
-        <p>No crops planted yet. Add some from the home page!</p>
+        <p className="empty-message">No crops planted yet. Add some from the home page!</p>
       ) : (
-        garden.map(crop => (
-          <MyGardenCards
-            key={crop.id}
-            crop={crop}
-            onHarvest={handleHarvest}
-            onUpdate={handleUpdate}
-          />
-        ))
+        <div className="card-grid">
+          {garden.map(crop => (
+            <MyGardenCards
+              key={crop.id}
+              crop={crop}
+              onHarvest={handleHarvest}
+              onUpdate={handleUpdate}
+            />
+          ))}
+        </div>
       )}
     </div>
   );

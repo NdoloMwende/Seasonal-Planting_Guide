@@ -6,28 +6,33 @@ function MyGardenCards({ crop, onHarvest, onUpdate }) {
   const ready = isReadyToHarvest(expectedHarvestDate);
 
   return (
-    <div className="bg-white rounded-lg shadow p-4">
-      <img src={crop.image} alt={crop.name} className="w-full h-40 object-cover rounded" />
-      <h2 className="text-lg font-semibold mt-2">{crop.name}</h2>
+    <div className="card">
+     
+     <div className="card-image">
+  <img src={crop.image} alt={crop.name} />
+</div>
+      <div className="card-content">
+      <h2>{crop.name}</h2>
       <p>📅 Planted: {crop.plantingDate}</p>
       <p>🌾 Expected Harvest: {expectedHarvestDate}</p>
-      {ready && <span className="text-orange-600 font-bold">🌾 Ready to Harvest</span>}
-      <div className="flex gap-2 mt-3">
+      {ready && <span className="badge">🌾 Ready to Harvest</span>}
+      <div className="card-actions">
         <button
           onClick={() => {
             const newDate = prompt("Enter new planting date (YYYY-MM-DD):", crop.plantingDate);
             if (newDate) onUpdate(crop.id, newDate, crop.maturityDays);
           }}
-          className="px-3 py-1 bg-blue-500 text-white rounded"
+          className="px-3 py-3 bg-primary text-bg rounded-lg border border-primary hover:border-primary scale-up"
         >
           Update
         </button>
         <button
           onClick={() => onHarvest(crop, expectedHarvestDate, today)}
-          className="px-3 py-1 bg-green-600 text-white rounded"
+          className="px-3 py-3 bg-accent text-bg rounded-lg border border-primary hover:border-primary scale-up"
         >
           Harvest
         </button>
+        </div>
       </div>
     </div>
   );

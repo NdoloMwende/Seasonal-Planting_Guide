@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { SyncLoader } from 'react-spinners';
 import CropCard from '../components/CropCard';
-import Filter from '../components/Filter'
+import useFilters from '../hooks/useFilter';
+import FilterBar from '../components/FilterBar';
 
 function Home() {
   // State for setting loading screen
@@ -30,9 +31,14 @@ function Home() {
     fetchData();
   }, [])
   // State for filter option
-  const [option, setOption] = useState("")
-  // Filtering Data based on option selected
-    const filteredData = option ? cropData.filter(crop => crop.location === option) : cropData;
+  const {
+    searchTerm, setSearchTerm,
+    filterLocation, setFilterLocation,
+    filterSeason, setFilterSeason,
+    // filterEarly, setFilterEarly, // not needed here
+    locations, seasons,
+    filteredItems
+  } = useFilters(cropData, { enableEarlyFilter: false });
   
     if (loading) {
         return (
@@ -45,14 +51,24 @@ function Home() {
         style={{ display: "flex", content: "center", justifyContent: "center", marginTop: "20px" }}
       />
       )}
-      if (error) return <div style={{ color: 'red', textAlign: 'center', marginTop: '20px' }}>Error: {error}</div>
+      if (error) return <div className="error-message">Error: {error}</div>
   return (
-    <div>
-      <h1>Home Page</h1>
-      <Filter setOption={setOption} option={option}/>
-      
-      <div>
-        {filteredData.map(crop => (
+    <div className="garden-container">
+      <h1 className="page-title">Home</h1>
+      {/* <Filter setOption={setOption} option={option}/> */}
+         <FilterBar
+        searchTerm={searchTerm} setSearchTerm={setSearchTerm}
+        filterLocation={filterLocation} setFilterLocation={setFilterLocation}
+        filterSeason={filterSeason} setFilterSeason={setFilterSeason}
+        // hide early checkbox on Home:
+        showEarlyFilter={false}
+        // hide season select on Home to match your previous UI
+        showSeason={false}
+        locations={locations}
+        seasons={seasons}
+      />
+      <div className="card-grid">
+        {filteredItems.map(crop => (
           <CropCard key={crop.id} crop={crop} />
         ))}
       </div>
