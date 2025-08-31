@@ -1,3 +1,9 @@
+import { useEffect, useState } from 'react';
+import HistoryCard from '../components/HistoryCards';
+import FilterBar from '../components/FilterBar';
+import useFilters from '../hooks/useFilter';
+
+
 function History() {
  const [rawHistory, setRawHistory] = useState([]);
   const [crops, setCrops] = useState([]);
@@ -9,8 +15,10 @@ function History() {
     const fetchAll = async () => {
       try {
         const [hRes, cRes] = await Promise.all([
-          fetch("http://localhost:3000/history"),
-          fetch("http://localhost:3000/crops")
+
+          fetch(`https://seasonal-planting-guide-json-api.onrender.com/history/`),
+          fetch(`https://seasonal-planting-guide-json-api.onrender.com/crops/`)
+
         ]);
         if (!hRes.ok || !cRes.ok) throw new Error("Failed to fetch data");
         const [historyJson, cropsJson] = await Promise.all([hRes.json(), cRes.json()]);
@@ -38,7 +46,7 @@ function History() {
       plantingSeason: c.plantingSeason || ""
     };
   });
-// enrich history items with location + plantingSeason (if available)
+
   const enrichedHistory = rawHistory.map(h => ({
     ...h,
     location: cropLookup[h.cropName]?.location || "",
@@ -74,7 +82,8 @@ function History() {
         locations={locations} seasons={seasons}
       />
 
-  {filteredItems.length === 0 ? (
+      {filteredItems.length === 0 ? (
+
         <p>No matching crops found.</p>
       ) : (
         filteredItems.map(crop => (
@@ -83,6 +92,5 @@ function History() {
       )}
     </div>
   );
-}
-
 export default History;
+

@@ -1,9 +1,39 @@
-function MyGardenCards({ plant }) {
+import { calculateHarvestDate, isReadyToHarvest } from '../utils/harvestUtils';
+
+function MyGardenCards({ crop, onHarvest, onUpdate }) {
+  const expectedHarvestDate = calculateHarvestDate(crop.plantingDate, crop.maturityDays);
+  const today = new Date().toISOString().split('T')[0];
+  const ready = isReadyToHarvest(expectedHarvestDate);
+
   return (
-    <div className="garden-card" style={{ border: "1px solid green", margin: "10px", padding: "15px", borderRadius: "8px" }}>
-      <h3>{plant.name}</h3>
-      <p><strong>Planted On:</strong> {plant.plantingDate}</p>
-      <p><strong>Status:</strong> {plant.status}</p>
+    <div className="card">
+     
+     <div className="card-image">
+  <img src={crop.image} alt={crop.name} />
+</div>
+      <div className="card-content">
+      <h2>{crop.name}</h2>
+      <p>📅 Planted: {crop.plantingDate}</p>
+      <p>🌾 Expected Harvest: {expectedHarvestDate}</p>
+      {ready && <span className="badge">🌾 Ready to Harvest</span>}
+      <div className="card-actions">
+        <button
+          onClick={() => {
+            const newDate = prompt("Enter new planting date (YYYY-MM-DD):", crop.plantingDate);
+            if (newDate) onUpdate(crop.id, newDate, crop.maturityDays);
+          }}
+          className="px-3 py-3 bg-primary text-bg rounded-lg border border-primary hover:border-primary scale-up"
+        >
+          Update
+        </button>
+        <button
+          onClick={() => onHarvest(crop, expectedHarvestDate, today)}
+          className="px-3 py-3 bg-accent text-bg rounded-lg border border-primary hover:border-primary scale-up"
+        >
+          Harvest
+        </button>
+        </div>
+      </div>
     </div>
   );
 }

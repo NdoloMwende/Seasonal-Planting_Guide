@@ -29,3 +29,4 @@ function HistoryCard({ crop }) {
 }
 
 export default HistoryCard;
+
