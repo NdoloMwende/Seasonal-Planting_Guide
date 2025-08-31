@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-      const res =await fetch('http://localhost:3000/crops')
+      const res =await fetch('https://seasonal-planting-guide-json-api.onrender.com/crops')
       if (!res.ok) throw new Error ('HTTP error! Status: ${res.status}');
       const data = await res.json();
       setCropData(data)
