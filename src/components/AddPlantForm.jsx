@@ -39,7 +39,7 @@ const AddPlantForm = ({ crop, onClose }) => {
     };
 
     try {
-      await axios.post("http://localhost:3000/myGarden", newCrop);
+      await axios.post("https://seasonal-planting-guide-json-api.onrender.com/myGarden", newCrop);
       alert(`${crop.name} added to your garden!`);
       onClose?.();
     } catch (err) {
