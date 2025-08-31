@@ -363,33 +363,6 @@
   ],
   "myGarden": [
     {
-      "id": "e3d3",
-      "name": "Maize",
-      "plantingDate": "2025-08-30",
-      "harvestDate": "2025-11-28",
-      "maturityDays": 90,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
-      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
-    },
-    {
-      "id": "7d91",
-      "name": "Maize",
-      "plantingDate": "2025-07-31",
-      "harvestDate": "2025-10-29",
-      "maturityDays": 90,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
-      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
-    },
-    {
-      "id": "c041",
-      "name": "Coconut",
-      "plantingDate": "2025-08-31",
-      "harvestDate": "2026-08-31",
-      "maturityDays": 365,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Coconut_tree_06264.JPG/640px-Coconut_tree_06264.JPG",
-      "description": "Coconuts are a coastal tropical crop, valued for food, oil, and fiber."
-    },
-    {
       "id": "ad3a",
       "name": "Beans",
       "plantingDate": "2025-09-06",
@@ -399,5 +372,44 @@
       "description": "Beans are a key source of protein and do well in cool, temperate climates."
     }
   ],
-  "history": []
+  "history": [
+    {
+      "id": "9efe",
+      "cropName": "Maize",
+      "plantingDate": "2025-07-31",
+      "expectedHarvestDate": "2025-10-29",
+      "actualHarvestDate": "2025-08-31",
+      "harvestedEarly": true
+    },
+    {
+      "id": "c63c",
+      "cropName": "Maize",
+      "plantingDate": "2025-08-30",
+      "expectedHarvestDate": "2025-11-28",
+      "actualHarvestDate": "2025-08-31",
+      "harvestedEarly": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Zea_mays_Ladyfinger_0zz.jpg/640px-Zea_mays_Ladyfinger_0zz.jpg",
+      "description": "Maize is Kenya’s staple crop, widely grown in the highlands with fertile soils."
+    },
+    {
+      "id": "9371",
+      "cropName": "Coconut",
+      "plantingDate": "2025-08-31",
+      "expectedHarvestDate": "2026-08-31",
+      "actualHarvestDate": "2025-08-31",
+      "harvestedEarly": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Coconut_tree_06264.JPG/640px-Coconut_tree_06264.JPG",
+      "description": "Coconuts are a coastal tropical crop, valued for food, oil, and fiber."
+    },
+    {
+      "id": "d3ca",
+      "cropName": "Millet",
+      "plantingDate": "2025-09-01",
+      "expectedHarvestDate": "2025-12-05",
+      "actualHarvestDate": "2025-08-31",
+      "harvestedEarly": true,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Millet_Farm_In_Ghana%2C_Africa.jpg/640px-Millet_Farm_In_Ghana%2C_Africa.jpg",
+      "description": "Millet is a hardy cereal grown in dry regions, valued for porridge and flour."
+    }
+  ]
 }

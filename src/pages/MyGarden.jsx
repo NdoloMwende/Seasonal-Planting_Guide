@@ -37,12 +37,17 @@ function MyGarden() {
     const harvestedEarly = new Date(actualHarvestDate) < new Date(expectedHarvestDate);
 
     const historyEntry = {
-      cropName: crop.name,
-      plantingDate: crop.plantingDate,
-      expectedHarvestDate,
-      actualHarvestDate,
-      harvestedEarly
-    };
+  cropName: crop.name,
+  plantingDate: crop.plantingDate,
+  expectedHarvestDate,
+  actualHarvestDate,
+  harvestedEarly,
+  image: crop.image,
+  description: crop.description,
+  location: crop.location,
+  plantingSeason: crop.plantingSeason
+};
+
     try {
       const historyRes = await fetch('http://localhost:3000/history', {
         method: 'POST',
