@@ -1,68 +1,369 @@
+/* === Theme Variables === */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --background-color: #1a1a1a;
+  --secondary-color: #2a3a30;
+  --primary-color: #38e07b;
+  --accent-color: #5ce692;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border-radius: 0.5rem;
+  --shadow-lg: 0 15px 15px rgba(0, 0, 0, 0.2);
+  --font-family: 'Spline Sans', system-ui, sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* === Global Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+/* Navbar container */
+.navbar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between; /* Logo left, links right */
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Logo text */
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+/* Navbar links container */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Links */
+.nav-link {
+  color: white;
+  text-decoration: none;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.nav-link:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* Active link style */
+.active-link {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+
+/* === Page Container === */
+.garden-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === Page Title === */
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* === Empty State Message === */
+.empty-message {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* === Grid Layout === */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === Crop Card === */
+.card {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Image Section === */
+.card-image {
+  background-color: var(--secondary-color);
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+}
+ 
+.card-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+.card-image img:hover {
+  transform: scale(1.05);
+}
+
+/* === Card Content === */
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+/* === Badge === */
+.badge {
+  display: inline-block;
+  background-color: #2ecc71;
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* === Button Group === */
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.card-actions button:hover {
+  background-color: var(--accent-color);
+}
+
+/* === AddPlantForm Styling === */
+/* .form-card {
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  margin: 1rem auto;
+} */
+
+.form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.read-only {
+  background-color: var(--secondary-color);
+  color: var(--text-secondary);
+}
+/* === Loader & Error === */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* === Filter Bar === */
+.filter-bar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+  border: 1px solid var(--primary-color);
+}
+
+/* === Badge Overlay on Image === */
+.badge-overlay {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+}
+
+/* Ensure card-image is positioned relative */
+.card-image {
+  position: relative;
+}
+
+/* Filter Bar */
+.filter-bar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.filter-icon {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* Dropdown */
+.filter-select {
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  background-color: var(--secondary-color);
+  color: var(--text-primary);
+  border: 1px solid transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-lg);
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--primary-color) 50%),
+                    linear-gradient(135deg, var(--primary-color) 50%, transparent 50%);
+  background-position: calc(100% - 15px) calc(50% - 3px),
+                       calc(100% - 10px) calc(50% - 3px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.filter-select:hover {
+  border-color: var(--primary-color);
+  background-color: #32473a;
+}
+
+.filter-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(56, 224, 123, 0.3);
+}
+
+/* === Modal Overlay === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: var(--secondary-color);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  width: 90%;
+  color: var(--text-primary);
+  animation: slideUp 0.3s ease-in-out;
+  font-size: 0.875rem;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }

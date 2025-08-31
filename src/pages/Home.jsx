@@ -45,13 +45,13 @@ function Home() {
         style={{ display: "flex", content: "center", justifyContent: "center", marginTop: "20px" }}
       />
       )}
-      if (error) return <div style={{ color: 'red', textAlign: 'center', marginTop: '20px' }}>Error: {error}</div>
+      if (error) return <div className="error-message">Error: {error}</div>
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="garden-container">
+      <h1 className="page-title">Home</h1>
       <Filter setOption={setOption} option={option}/>
-      
-      <div>
+
+      <div className="card-grid">
         {filteredData.map(crop => (
           <CropCard key={crop.id} crop={crop} />
         ))}

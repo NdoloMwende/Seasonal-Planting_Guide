@@ -49,43 +49,43 @@ const AddPlantForm = ({ crop, onClose }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 bg-gray-100 rounded">
-      <h2 className="text-lg font-bold mb-2">Add Crop to Garden</h2>
+    <form className="form-card" onSubmit={handleSubmit}>
+      <h2 className="form-title">Add Crop to Garden</h2>
 
       {/* Show crop name (read-only) */}
-      <div className="mb-2">
-        <label className="block font-semibold">Crop Name:</label>
+      <div className="form-group">
+        <label className="form-label">Crop Name:</label>
         <input
           type="text"
           value={crop?.name || ""}
           readOnly
-          className="border p-2 w-full bg-gray-200"
+          className="form-input read-only"
         />
       </div>
 
       {/* Planting date input */}
-      <label className="block mb-2">
-        Planting Date:
+      <div className="form-group">
+        <label className="form-label">
+          Planting Date:
+        </label>
         <input
           type="date"
           value={plantingDate}
           onChange={(e) => setPlantingDate(e.target.value)}
           required
-          className="border p-2 w-full"
-        />
-      </label>
+          className="form-input"
+        />      
+      </div>
 
-      <div className="flex gap-2 mt-2">
+      <div className="card-actions">
         <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded"
+          type="submit"         
         >
           Submit
         </button>
         <button
           type="button"
-          onClick={onClose}
-          className="bg-gray-400 text-white px-4 py-2 rounded"
+          onClick={onClose}          
         >
           Cancel
         </button>
