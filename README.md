@@ -20,6 +20,36 @@ The **Seasonal Planting Guide** enables users to:
 - **Website:** [Deployed Site]( http://localhost:5173/)  
 - **Mock API (JSON Server on Render):** [Deployed API](https://seasonal-planting-guide-json-api.onrender.com/)
 
+## Project Structure
+Seasonal-Planting-Guide/
+├── public/                  
+├── src/                     
+│   ├── components/          
+│   │   ├── AddPlantForm.jsx
+│   │   ├── CropCard.jsx
+│   │   ├── FilterBar.jsx
+│   │   ├── HistoryCards.jsx
+│   │   ├── MyGardenCards.jsx
+│   │   └── Navbar.jsx
+│   ├── hooks/               
+│   │   ├── useFilter.js
+│   │   └── useDeleteWithUndo.jsx
+│   ├── pages/               
+│   │   ├── History.jsx
+│   │   ├── Home.jsx
+│   │   └── MyGarden.jsx
+│   ├── utils/               
+│   │   └── harvestUtils.js
+│   ├── App.jsx              
+│   ├── App.css              
+│   ├── index.css            
+│   ├── index.html          
+│   └── main.jsx             
+├── .gitignore               
+├── package.json             
+├── README.md                
+└── ... (other config files, e.g., .env, .eslintrc)
+
 
 ## Configuration Instructions
 - Clone the repository:
