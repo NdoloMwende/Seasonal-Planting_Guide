@@ -74,6 +74,7 @@ function History() {
 
   return (
     <div className="history-page">
+      <ToastContainer />
       <h1 className="page-title">Harvest History</h1>
       <p className="page-subtitle">A log of all your successfully harvested crops.</p>
 
