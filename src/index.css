@@ -181,6 +181,18 @@ body {
   background-color: var(--accent-color);
 }
 
+.card-actions .delete-btn {  
+  background-color: #e74c3c;
+  color: white;
+  border: none;  
+  transition: background-color 0.3s ease;
+}
+
+.card-actions .delete-btn:hover {
+  background-color: #c0392b;
+}
+
+
 /* === AddPlantForm Styling === */
 
 .form-title {
@@ -433,7 +445,6 @@ body {
   margin-bottom: 2rem;
   text-align: center;
 }
-
 
 /* === Animations === */
 @keyframes fadeIn {

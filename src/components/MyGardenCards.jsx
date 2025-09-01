@@ -33,12 +33,11 @@ function MyGardenCards({ crop, onHarvest, onUpdate,onDelete }) {
           Harvest
         </button>
          <button
-    onClick={() => onDelete(crop)}
-    className="px-3 py-3 bg-red-600 text-white rounded-lg border border-red-600 hover:bg-red-700 scale-up"
-    style={{ backgroundColor: "red", border: "1px solid darkred" }}
-  >
-    Remove
-  </button>
+          onClick={() => onDelete(crop)}
+          className="delete-btn"
+        >
+          Remove
+        </button>
         </div>
       </div>
     </div>

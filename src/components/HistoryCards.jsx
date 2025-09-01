@@ -23,11 +23,14 @@ function HistoryCard({ crop, onDelete }) {
         {harvestedEarly && (
           <span className="harvest-badge">Harvested Early</span>
         )}
-         <button
-         onClick={() => onDelete(crop)}
-      className="card-actions">
-      Remove {crop.cropName}
-    </button>
+        <div className="card-actions">
+          <button
+            onClick={() => onDelete(crop)}
+            className="delete-btn"
+          >
+            Remove {crop.cropName}
+          </button>
+        </div>
       </div>
     </div>
   );

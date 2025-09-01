@@ -5,7 +5,7 @@ function useDeleteWithUndo({ endpoint, onSuccess }) {
     let undoClicked = false;
 
     const toastId = toast(
-      ({ closeToast }) => (
+       ({ closeToast }) => (                  // i tried figuring our why closeToast is not read ...everything is working though//
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <p>
             Are you sure you want to delete <strong>{item.name || item.cropName || label}</strong>?
