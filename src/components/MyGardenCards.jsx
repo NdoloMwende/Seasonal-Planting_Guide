@@ -1,6 +1,6 @@
 import { calculateHarvestDate, isReadyToHarvest } from '../utils/harvestUtils';
 
-function MyGardenCards({ crop, onHarvest, onUpdate }) {
+function MyGardenCards({ crop, onHarvest, onUpdate,onDelete }) {
   const expectedHarvestDate = calculateHarvestDate(crop.plantingDate, crop.maturityDays);
   const today = new Date().toISOString().split('T')[0];
   const ready = isReadyToHarvest(expectedHarvestDate);
@@ -32,6 +32,13 @@ function MyGardenCards({ crop, onHarvest, onUpdate }) {
         >
           Harvest
         </button>
+         <button
+    onClick={() => onDelete(crop)}
+    className="px-3 py-3 bg-red-600 text-white rounded-lg border border-red-600 hover:bg-red-700 scale-up"
+    style={{ backgroundColor: "red", border: "1px solid darkred" }}
+  >
+    Remove
+  </button>
         </div>
       </div>
     </div>

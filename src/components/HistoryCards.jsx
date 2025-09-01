@@ -1,4 +1,4 @@
-function HistoryCard({ crop }) {
+function HistoryCard({ crop, onDelete }) {
   const harvestedEarly = new Date(crop.actualHarvestDate) < new Date(crop.expectedHarvestDate);
 
   const formatDate = (dateStr) =>
@@ -23,6 +23,11 @@ function HistoryCard({ crop }) {
         {harvestedEarly && (
           <span className="harvest-badge">Harvested Early</span>
         )}
+         <button
+         onClick={() => onDelete(crop)}
+      className="card-actions">
+      Remove {crop.cropName}
+    </button>
       </div>
     </div>
   );

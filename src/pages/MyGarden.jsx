@@ -3,6 +3,7 @@ import MyGardenCards from '../components/MyGardenCards';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { calculateHarvestDate, isReadyToHarvest } from '../utils/harvestUtils';
+import useDeleteWithUndo from '../hooks/useDeleteWithUndo';
 
 function MyGarden() {
   const [garden, setGarden] = useState([]);
@@ -35,6 +36,8 @@ function MyGarden() {
 
   const handleHarvest = async (crop, expectedHarvestDate, actualHarvestDate) => {
     const harvestedEarly = new Date(actualHarvestDate) < new Date(expectedHarvestDate);
+     
+  
 
     const historyEntry = {
   cropName: crop.name,
@@ -68,6 +71,13 @@ function MyGarden() {
       toast.error("Failed to move crop to history.");
     }
   };
+
+    const handleDelete = useDeleteWithUndo({
+    endpoint: 'https://seasonal-planting-guide-json-api.onrender.com/myGarden',
+    onSuccess: (id) => {
+      setGarden((prev) => prev.filter((crop) => crop.id !== id));
+    }
+  });
 
   const handleUpdate = async (id, newDate, maturityDays) => {
   const newHarvestDate = calculateHarvestDate(newDate, maturityDays);
@@ -105,6 +115,7 @@ function MyGarden() {
               crop={crop}
               onHarvest={handleHarvest}
               onUpdate={handleUpdate}
+              onDelete={handleDelete}
             />
           ))}
         </div>
