@@ -32,6 +32,7 @@ The **Seasonal Planting Guide** enables users to:
 - **Mock API (JSON Server on Render):** [Deployed API](https://seasonal-planting-guide-json-api.onrender.com/)
 
 ## Project Structure
+```bash
 Seasonal-Planting-Guide/
 ├── public/                  
 ├── src/                     
@@ -60,7 +61,7 @@ Seasonal-Planting-Guide/
 ├── package.json             
 ├── README.md                
 └── ... (other config files, e.g., .env, .eslintrc)
-
+```
 
 ## Configuration Instructions
 - Clone the repository:
