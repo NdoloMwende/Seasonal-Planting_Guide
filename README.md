@@ -13,6 +13,17 @@ The **Seasonal Planting Guide** enables users to:
 - Update the planting date from My Garden
 - Receive alerts when crops are ready to harvest.
 - View a historical record of harvested crops.
+### Project Features
+- Built with Vite + React for fast performance
+- Modular component structure
+- Custom hooks for filtering and deletion with undo
+- Toast notifications for user feedback
+### Technologies used
+- React (Vite)
+- JSON Server (mock backend)
+- React Router
+- React Toastify
+- Render (hosting)
 
 
 ## Live Demo
@@ -21,6 +32,7 @@ The **Seasonal Planting Guide** enables users to:
 - **Mock API (JSON Server on Render):** [Deployed API](https://seasonal-planting-guide-json-api.onrender.com/)
 
 ## Project Structure
+```bash
 Seasonal-Planting-Guide/
 ├── public/                  
 ├── src/                     
@@ -49,7 +61,7 @@ Seasonal-Planting-Guide/
 ├── package.json             
 ├── README.md                
 └── ... (other config files, e.g., .env, .eslintrc)
-
+```
 
 ## Configuration Instructions
 - Clone the repository:
@@ -61,8 +73,8 @@ Seasonal-Planting-Guide/
  - Backend JSON API is already hosted on Render
  - If you wish to run locally, configure the json-server and update API URLs in the project
 
-## Insatllation Instructions
-### Install dependancies
+## Installation Instructions
+### Install dependencies
 ```bash
 npm install
 ```
@@ -70,13 +82,12 @@ npm install
 ```bash
 npm run dev
 ```
-## Operaion Instructions
+## Operation Instructions
 - Run the frontend with npm run dev
 - Ensure JSON server is running(via render)
 - Open the provided localhost URL to access the app(http://localhost:5173/)
-- Browse crops, search and add tou your garden
-## Copyright and Licensing
-- This project is licenced under MIT license
+- Browse crops, search and add to your garden
+## Copyright
 - All images are sourced from Wikipedia Commons.
 ## Contact Information
 - @NdoloMwende - Mercy Ndolo(Scrum master)
