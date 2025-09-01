@@ -45,7 +45,7 @@ const AddPlantForm = ({ crop, onClose }) => {
     } catch (err) {
       console.error("Error adding crop:", err.response?.data || err.message);
       alert("Failed to add crop.");
-    }
+    }   
   };
 
   return (
