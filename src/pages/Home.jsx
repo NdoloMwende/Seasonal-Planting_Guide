@@ -62,8 +62,8 @@ function Home() {
         filterSeason={filterSeason} setFilterSeason={setFilterSeason}
         // hide early checkbox on Home:
         showEarlyFilter={false}
-        // hide season select on Home to match your previous UI
-        showSeason={false}
+        // unhide season select on Home to show seasons dropdown
+        showSeason={true}
         locations={locations}
         seasons={seasons}
       />

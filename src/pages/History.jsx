@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import HistoryCard from '../components/HistoryCards';
 import FilterBar from '../components/FilterBar';
 import useFilters from '../hooks/useFilter';
-
+import useDeleteWithUndo from '../hooks/useDeleteWithUndo';
+import { toast, ToastContainer } from 'react-toastify';
 
 function History() {
  const [rawHistory, setRawHistory] = useState([]);
@@ -51,6 +52,12 @@ function History() {
     location: cropLookup[h.cropName]?.location || "",
     plantingSeason: cropLookup[h.cropName]?.plantingSeason || ""
   }));
+  //handle deletion of items from history page
+  const handleDelete = useDeleteWithUndo({
+  endpoint: 'https://seasonal-planting-guide-json-api.onrender.com/history',
+  onSuccess: (id) => setRawHistory(prev => prev.filter(item => item.id !== id))
+});
+
 
   // use the hook. Use crops as optionsSource so dropdowns reflect all crops
   const {
@@ -67,6 +74,7 @@ function History() {
 
   return (
     <div className="history-page">
+      <ToastContainer />
       <h1 className="page-title">Harvest History</h1>
       <p className="page-subtitle">A log of all your successfully harvested crops.</p>
 
@@ -85,7 +93,7 @@ function History() {
         <p>No matching crops found.</p>
       ) : (
         filteredItems.map(crop => (
-          <HistoryCard key={crop.id} crop={crop} />
+          <HistoryCard key={crop.id} crop={crop} onDelete={handleDelete} />
         ))
       )}
     </div>
