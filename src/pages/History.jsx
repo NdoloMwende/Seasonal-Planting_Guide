@@ -16,8 +16,10 @@ function History() {
     const fetchAll = async () => {
       try {
         const [hRes, cRes] = await Promise.all([
+
           fetch(`https://seasonal-planting-guide-json-api.onrender.com/history/`),
           fetch(`https://seasonal-planting-guide-json-api.onrender.com/crops/`)
+
         ]);
         if (!hRes.ok || !cRes.ok) throw new Error("Failed to fetch data");
         const [historyJson, cropsJson] = await Promise.all([hRes.json(), cRes.json()]);
@@ -46,7 +48,6 @@ function History() {
     };
   });
 
-  // enrich history items with location + plantingSeason (if available)
   const enrichedHistory = rawHistory.map(h => ({
     ...h,
     location: cropLookup[h.cropName]?.location || "",
@@ -90,6 +91,7 @@ function History() {
       />
 
       {filteredItems.length === 0 ? (
+
         <p>No matching crops found.</p>
       ) : (
         filteredItems.map(crop => (
@@ -98,6 +100,5 @@ function History() {
       )}
     </div>
   );
-}
+export default History;
 
-export default History;

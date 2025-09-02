@@ -37,3 +37,4 @@ function HistoryCard({ crop, onDelete }) {
 }
 
 export default HistoryCard;
+
